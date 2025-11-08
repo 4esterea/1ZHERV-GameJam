@@ -18,7 +18,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private float offset;
     // Interval between customers
     [SerializeField] private float interval;
-
+    [SerializeField] private GameManager gameManager;
     // Array of potions
     [SerializeField] Potion[] potions;
     private bool canSpawn = true;
