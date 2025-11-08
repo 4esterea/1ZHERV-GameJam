@@ -26,7 +26,6 @@ public class PlayerInteract : MonoBehaviour
     private float holdTime = 0f;
     private float requiredHoldTime = 2f;
     private Crate holdingCrate = null;
-    private bool areRecipesVisible = false;
     private PotionReceiver potionReceiver = null;
     private void Awake()
     {
@@ -118,7 +117,6 @@ public class PlayerInteract : MonoBehaviour
     {
         cauldron = interactable as Cauldron;
         crate = interactable as Crate;
-        button = interactable as CrateButton;
         potionReceiver = interactable as PotionReceiver;
         if (isHolding && interactable == cauldron && cauldron != null && _heldIngredient != null)
         {

@@ -83,7 +83,6 @@ public class CustomerManager : MonoBehaviour
                 {
                     Debug.Log("Wrong potion");
                     _potionReceiver.DestroyPotion();
-                    gameManager.IncreaseChaosLevel(2f);
                 }
             }
         }

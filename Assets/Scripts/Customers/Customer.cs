@@ -75,6 +75,19 @@ public class Customer : MonoBehaviour
                 customerManager.DecrementCounter();
                 wasCounterDecremented = true;
             }
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition - new Vector3(15f, 0, -15f), 5f * Time.deltaTime);
+            if (transform.position == targetPosition - new Vector3(15f, 0, -15f))
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (isSatisfied)
+        {
+            if (!wasCounterDecremented)
+            {
+                customerManager.DecrementCounter();
+                wasCounterDecremented = true;
+            }
             transform.position = Vector3.MoveTowards(transform.position, targetPosition - new Vector3(0, 0, 5f), 5f * Time.deltaTime);
             if (transform.position == targetPosition - new Vector3(0, 0, 5f))
             {
